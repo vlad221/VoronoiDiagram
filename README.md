@@ -4,3 +4,5 @@ Updated this repository to work with at least 4.21.2 -> https://github.com/afuzz
 Hey, i uploaded a little modified and updated version from this guy.
 
 All credits go to him. Feel free to use it and improve it.
+
+Just copy and install the folder into the plugins section of your project.
