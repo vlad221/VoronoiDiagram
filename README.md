@@ -8,6 +8,10 @@ All credits go to him. Feel free to use it and improve it.
 Just copy and install the folder into the plugins section of your project.
 
 The template :
+###### Project.build.cs ( add 'VoronoiDiagram' into plubicDependency)
+```
+PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "VoronoiDiagram" });
+```
 
 ###### file.cpp
 ```
