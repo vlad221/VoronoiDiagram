@@ -66,7 +66,7 @@ UFUNCTION(BlueprintCallable, Category = "Custom")
 
 ###### Blueprint
 
-![blueprint](https://i.gyazo.com/63476e2728f29c9d751b109b63f5bf45.png)
+![blueprint](https://i.gyazo.com/a8f9c5f70f97f60ca200efb9638f291b.png)
 
 ###### And the result
 ![result](https://i.gyazo.com/bb62d634ea8e10c20ff9383746a0c9ba.png)
