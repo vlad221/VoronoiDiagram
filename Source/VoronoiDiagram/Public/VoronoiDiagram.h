@@ -9,6 +9,8 @@
 #include "VoronoiDiagramGeneratedEdge.h"
 #include "VoronoiDiagramGeneratedSite.h"
 
+#include "Kismet/KismetMathLibrary.h"
+
 DECLARE_LOG_CATEGORY_EXTERN(LogVoronoiDiagram, Log, All);
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -17,6 +19,7 @@ DECLARE_LOG_CATEGORY_EXTERN(LogVoronoiDiagram, Log, All);
 class FVoronoiDiagramEdgeList
 {
 public:
+
     TArray<TSharedPtr<FVoronoiDiagramHalfEdge, ESPMode::ThreadSafe>> Hash;
 	TSharedPtr<FVoronoiDiagramHalfEdge, ESPMode::ThreadSafe> LeftEnd;
 	TSharedPtr<FVoronoiDiagramHalfEdge, ESPMode::ThreadSafe> RightEnd;
@@ -304,6 +307,7 @@ public:
 /*
  *  Generates Voronoi Diagram from a set of provided points
  */
+
 class VORONOIDIAGRAM_API FVoronoiDiagram
 {
 public:
@@ -313,7 +317,7 @@ public:
      *  @param  InBounds    Rectangle that represents a 2D region for placing points
      */
     FVoronoiDiagram(FIntRect InBounds);
-    
+
     /*
      *  Adds points to the diagram to be used at generation time
      *

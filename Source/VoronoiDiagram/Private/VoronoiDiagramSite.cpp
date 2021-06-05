@@ -191,8 +191,10 @@ void FVoronoiDiagramSite::GenerateCentroid(FIntRect Bounds)
     float PartialArea;
     
     // Use all vertices except the last one
+    #pragma warning(suppress:4458)
     for(int32 Index = 0; Index < SortedVertices.Num() - 1; ++Index)
     {
+        #pragma warning(suppress:4458)
         CurrentVertex = FVector2D(SortedVertices[Index]);
         NextVertex = FVector2D(SortedVertices[Index + 1]);
 

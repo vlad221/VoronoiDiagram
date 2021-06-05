@@ -3,7 +3,6 @@
 #include "VoronoiDiagram.h"
 #include "VoronoiDiagramPrivatePCH.h"
 
-
 #include "ImageUtils.h"
 
 FVoronoiDiagram::FVoronoiDiagram(FIntRect InBounds)
@@ -11,6 +10,7 @@ FVoronoiDiagram::FVoronoiDiagram(FIntRect InBounds)
 {
 	GeneratedSites.Empty();
 }
+
 
 bool FVoronoiDiagram::AddPoints(const TArray<FIntPoint>& Points)
 {
@@ -218,6 +218,7 @@ if (Vertex.IsValid())
 		// Bound the edges of the diagram
 		for (auto Itr(GeneratedEdges.CreateConstIterator()); Itr; ++Itr)
 		{
+			#pragma warning(suppress:4456)
 			TSharedPtr<FVoronoiDiagramEdge, ESPMode::ThreadSafe> Edge = (*Itr);
 			Edge->GenerateClippedEndPoints(Bounds);
 		}
@@ -236,6 +237,7 @@ if (Vertex.IsValid())
 
 			for (auto EdgeItr(Site->Edges.CreateConstIterator()); EdgeItr; ++EdgeItr)
 			{
+				#pragma warning(suppress:4456)
 				TSharedPtr<FVoronoiDiagramEdge, ESPMode::ThreadSafe> Edge = (*EdgeItr);
 				
 				// Only add edges that are visible
@@ -271,6 +273,7 @@ if (Vertex.IsValid())
 		TArray<FVector2D> NewPoints;
 		for (auto Itr(GeneratedSites.CreateConstIterator()); Itr; ++Itr)
 		{
+			#pragma warning(suppress:4456)
 			FVoronoiDiagramGeneratedSite CurrentSite = Itr->Value;
 
 			FIntPoint CentroidPoint(FMath::RoundToInt(CurrentSite.Centroid.X), FMath::RoundToInt(CurrentSite.Centroid.Y));
